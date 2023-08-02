@@ -7,7 +7,6 @@
     - [Enable GoodCloud on router](#enable-goodcloud-on-router)
     - [Sign up GoodCloud account](#sign-up-goodcloud-account)
     - [Select server region](#select-server-region)
-    - [Add a new group](#add-a-new-group)
     - [Add device](#add-device)
     - [Bound info on router web Admin Panel](#bound-info-on-router-web-admin-panel)
     - [Unbind router](#unbind-router)
@@ -49,7 +48,6 @@ Features:
 * Check live router status
     - Live online offline status check
     - Live RAM and Load Average check
-    - LTE Signal
     - Email alarm about online offline status update
 
 * Set up routers remotely
@@ -65,10 +63,6 @@ Features:
 * Operate routers in batch
     - Set up config templates and configure routers in batch
     - Reboot or upgrade routers in batch
-
-* Manage routers in groups
-    - Divide devices in different groups
-    - Manage devices in one page
 
 * Site to Site
     - Virtual Office: extend your office network to other offices
@@ -87,7 +81,7 @@ On the left side of web Admin Panel -> APPLICATIONS -> GoodCloud.
 
 ![enable goodcloud](https://static.gl-inet.com/docs/en/4/tutorials/cloud/enable_goodcloud.png){class="glboxshadow"}
 
-Follow the steps above, to enable the cloud function, which will allow the router to connect to the GoodCloud server.
+Follow the steps above, to enable the GoodCloud function, which will allow the router to connect to the GoodCloud server.
 
 * **Remote SSH** is for remote access router's terminal via GoodCloud. Check out [here](#remote-access-routers-terminal).
 
@@ -97,7 +91,7 @@ Follow the steps above, to enable the cloud function, which will allow the route
 
 ### Sign up GoodCloud account
 
- Visit [https://www.goodcloud.xyz](https://www.goodcloud.xyz){target="_blank"}, sign up then sign in. If you don't find the verify email, look in spam or check email later. If you have any difficulty with sign up, please send email to [support@glinet.biz](mailto:support@glinet.biz) for help.
+Visit [https://www.goodcloud.xyz](https://www.goodcloud.xyz){target="_blank"}, sign up then sign in. If you don't find the verify email, look in spam or check email later. If you have any difficulty with sign up, please send email to [support@glinet.biz](mailto:support@glinet.biz) for help.
 
 ### Select server region
 
@@ -107,21 +101,13 @@ You can change the region on the top right corner at anytime.
 
 ![select region button](https://static.gl-inet.com/docs/en/4/tutorials/cloud/select_region_button.png){class="glboxshadow"}
 
-### Add a new group 
-
-On the left side -> Groups List -> Add group.
-
-Follow the steps below to add a new group.
-
-![add group](https://static.gl-inet.com/goodcloud/docs/add-group.png){class="glboxshadow"}
-
-Set the group name, company, description and location.
-
-Each device must belong to a group.
-
 ### Add device
 
-On the left side -> Devices List -> Add Device. There are three methods to bind device to your GoodCloud account, **Auto discover**, **Manually add** and **Bulk import**.
+Go to [GoodCloud site](https://www.goodcloud.xyz){target="_blank"}, on the left side -> Devices -> Bound Devices -> Add Devices. 
+
+There are three methods to bind device to your GoodCloud account, **Auto discover**, **Manually add** and **Bulk import**.
+
+![add device](https://static.gl-inet.com/docs/en/4/interface_guide/cloud/goodcloud_add_device_button.png){class="glboxshadow"}
 
 === "Auto discover"
 
@@ -129,38 +115,39 @@ On the left side -> Devices List -> Add Device. There are three methods to bind 
     
     Follow the steps below to add your device.
 
-    ![add device](https://static.gl-inet.com/goodcloud/docs/add-device.png){class="glboxshadow"}
+    ![add device](https://static.gl-inet.com/docs/en/4/interface_guide/cloud/goodcloud_add_device_steps.png){class="glboxshadow"}
 
-    Check out [here](../where_to_find_the_device_id_mac_sn) to find the Device ID.
+    Check out [here](../../faq/where_to_find_the_device_id_mac_sn) to find the Device ID.
 
-        Note: Input "DDNS/Device ID" here just to verify that the router is really 
-        original/valid.
-
-        If you haven't added a group before, it will automatically create a default 
-        group.
-
-    Click `Refresh` to force auto discover devices again.
-
-    ![auto discover](https://static.gl-inet.com/goodcloud/docs/auto-discover.png){class="glboxshadow"}
+    **Note**: Input "DDNS/Device ID" here just to verify that the router is really original/valid.
 
 === "Manually add"
 
-    If it can't discover automatically, try `Manually add`. All information that need to input can be found on the back of the router.
+    If it can't discover automatically, try **Manually add**. It need to input **MAC**, **SN** and **DDNS** / **Device ID**.
 
-        Note: Input "MAC", "SN" and "DDNS" / "Device ID" here just to verify that the 
-        router is really original and valid.
+    **Note**: Input "MAC", "SN" and "DDNS" / "Device ID" here just to verify that the router is really original and valid.
 
-    For new models, it has **Device ID** on the back of router.
+    There are two methods to find those info.
 
-    ![manually add device](https://static.gl-inet.com/goodcloud/docs/manually-add-device-device-id.png){class="glboxshadow"}
+    * **Method 1**: Find on the router web Admin Panel.
 
-    For old models, it has **DDNS** on the back of the router. Only the first 7 characters of **DDNS** are needed.
+        On the left side of web Admin Panel -> APPLICATIONS -> GoodCloud.
 
-    ![manually add device](https://static.gl-inet.com/goodcloud/docs/manually-add-device.png){class="glboxshadow"}
+        ![device info on admin panel](https://static.gl-inet.com/docs/en/4/interface_guide/cloud/device_info_on_admin_panel.png){class="glboxshadow"}
+
+    * **Method 2**: Find on the back of the router.
+
+        For new models, it has **Device ID** on the back of router.
+
+        ![manually add device](https://static.gl-inet.com/goodcloud/docs/manually-add-device-device-id.png){class="glboxshadow"}
+
+        For old models, it has **DDNS** on the back of the router. Only the first 7 characters of **DDNS** are needed.
+
+        ![manually add device](https://static.gl-inet.com/goodcloud/docs/manually-add-device.png){class="glboxshadow"}
 
 === "Bulk import"
 
-    `Bulk import` is for user who have a great number of devices to add. By `Bulk import` you can import many devices by a Microsoft excel file.
+    **Bulk import** is for user who have a great number of devices to add. By **Bulk import** you can import many devices by a Microsoft excel file.
 
 ### Bound info on router web Admin Panel
 
@@ -172,9 +159,15 @@ refresh this page, It will display the bound GoodCloud username and date.
 
 ### Unbind router
 
-If you want to unbind the router, go to router web Admin Panel, on the left side, APPLICATION -> GoodCloud, click **Unbind** button.
+There are two ways to unbind the device.
 
-![goodcloud unbind](https://static.gl-inet.com/docs/en/4/tutorials/cloud/goodcloud_unbind.png){class="glboxshadow"}
+* Method one: Go to router web Admin Panel, on the left side, APPLICATION -> GoodCloud, click **Unbind** button.
+
+    ![goodcloud unbind](https://static.gl-inet.com/docs/en/4/tutorials/cloud/goodcloud_unbind.png){class="glboxshadow"}
+
+* Method two: Go to GoodCloud website, on the left side, Devices -> Bound Devices.
+
+    ![goodcloud delete device](https://static.gl-inet.com/docs/en/4/interface_guide/cloud/goodcloud_delete_device.png){class="glboxshadow"}
 
 ## Manage your devices
 
@@ -196,25 +189,13 @@ there is icon at the first column of this table,
 
 Select the column you want to display.
 
-`Online time` is the latest time when device connected GoodCloud.
+**Online time** is the latest time when device connected GoodCloud.
 
-`Offline time` is the latest time when device disconnected GoodCloud.
+**Offline time** is the latest time when device disconnected GoodCloud.
 
-`Update time` is the latest time when device connected or disconnected GoodCloud.
+**Update time** is the latest time when device connected or disconnected GoodCloud.
 
-`IP`, if your router run VPN client, this IP will be your VPN IP by default. <a href="#goodcloud-and-vpn">Learn More</a>
-
-### LTE Signal
-
-Only available for 4G devices, e.g. GL-MiFi, GL-X750
-
-Toggle the column on Device List page.
-
-![device LTE signal](https://static.gl-inet.com/goodcloud/docs/lte_signal.png){class="glboxshadow"}
-
-It will show Signal strength, Type, and relavant parameters.
-
-![device LTE signal](https://static.gl-inet.com/goodcloud/docs/lte_signal_2.png){class="glboxshadow"}
+**IP**, if your router run VPN client, this IP will be your VPN IP by default. <a href="#goodcloud-and-vpn">Learn More</a>
 
 ### Device detail info
 
